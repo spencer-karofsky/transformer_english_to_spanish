@@ -9,6 +9,12 @@ class Encoder(nn.Module):
         """
         pass
 
+class Decoder(nn.Module):
+    def __init__(self):
+        """Initialize Decoder Class Variables
+        """
+        pass
+
 
 class Transformer(nn.Module):
     def __init__(self, N: int = 6, num_heads: int = 8):
