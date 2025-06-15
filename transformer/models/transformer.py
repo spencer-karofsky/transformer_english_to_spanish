@@ -43,7 +43,7 @@ class Transformer(nn.Module):
             N=N,
             embed_dim=embed_dim,
             num_heads=num_heads,
-            ff_hidden_dim=ffn_hidden_dim,
+            ffn_hidden_dim=ffn_hidden_dim,
             dropout=dropout
         )
 

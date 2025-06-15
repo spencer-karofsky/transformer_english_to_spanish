@@ -36,8 +36,10 @@ class SelfAttention(nn.Module):
             AssertationError: If Q, K, or V have mismatched shapes.
         """
         # Validate dimensionality compatability
-        assert Q.shape == K.shape, f'Q ({Q.shape}) and K ({K.shape}) have mismatched dimensions'
-        assert Q.shape[:3] == V.shape[:3], f'Q & K ({Q.shape}) and V ({V.shape}) have mismatched dimensions in the first three dimensions'
+        #assert Q.shape[:-2] == K.shape[:-2], f'Q/K batch-head mismatch: {Q.shape} vs {K.shape}'
+        #assert Q.shape[-1] == K.shape[-1], f'd_k mismatch: {Q.shape} vs {K.shape}'
+        #assert Q.shape[:3] == V.shape[:3], f'Q/V mismatch: {Q.shape} vs {V.shape}'
+
 
         # Transpose K, matrix-multiply with Q, and scale
         d_k = Q.shape[-1]

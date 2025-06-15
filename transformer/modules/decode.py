@@ -36,7 +36,8 @@ class DecoderBlock(nn.Module):
             nn.Linear(ffn_hidden_dim, embed_dim)
         )
 
-        self.dropout = dropout
+        self.dropout = nn.Dropout(dropout)
+
 
     def forward(self,
                 x: Tensor,
