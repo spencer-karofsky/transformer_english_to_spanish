@@ -1,10 +1,10 @@
 """
 From 'Attention is All You Need' Paper
 
-Contains implementations for three types of Attention:
-    1) Self-Attention
+Three types of Attention Used in the Paper:
+    1) Self-Attention: used in the encoder; every token attends to every other token
     2) Masked Self-Attention
-    3) Encoder-Decoder Attention
+    3) Cross Attention
 """
 from typing import Optional
 import torch
@@ -12,17 +12,17 @@ from torch import Tensor
 import torch.nn as nn
 import torch.nn.functional as F
 import math
-from abc import ABC, abstractmethod
 
-class Attention(nn.Module, ABC):
+class Attention(nn.Module):
     def __init__(self):
         super().__init__()
 
-    def _scaled_dot_product_attention(self,
-                                      Q: Tensor,
-                                      K: Tensor,
-                                      V: Tensor,
-                                      mask: Tensor | None = None,) -> Tensor:
+    def forward(self,
+                Q: Tensor,
+                K: Tensor,
+                V: Tensor,
+                mask: Tensor | None = None,
+                ) -> Tensor:
         """Computes Scaled Dot Product Attention
         Formula: Attention=Softmax((QK^T)/(sqrt(d_k)))V
         Meaning: How much should I focus on each vector (in Values tensor) when creating a new output vector?
@@ -55,7 +55,3 @@ class Attention(nn.Module, ABC):
         attention = attention @ V
 
         return attention
-    
-    @abstractmethod
-    def forward(self, *args, **kwargs):
-        pass
