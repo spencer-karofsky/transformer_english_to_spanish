@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from torch import Tensor
-from modules.attention import MultiHeadAttention
+from .attention import MultiHeadAttention
 from typing import Optional
 
 class DecoderBlock(nn.Module):
