@@ -58,8 +58,9 @@ class Encoder(nn.Module):
         """Initialize Encoder Class Variables
 
         Args:
-            N: number of encoders and decoders
+            vocab_size: number of distinct tokens in the vocab
             max_len: maximum sequence length the transformer can handle
+            N: number of encoders and decoders
             embed_dim: embedding dimension
             num_heads: number of scaled dot-product attention heads in multi-head attention
             ffn_hidden_dim: hidden layer dimension
