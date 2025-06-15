@@ -5,8 +5,8 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from torch import Tensor
-from encode import Encoder
-from decode import Decoder
+from transformer.modules.encode import Encoder
+from transformer.modules.decode import Decoder
 from typing import Optional
 
 
