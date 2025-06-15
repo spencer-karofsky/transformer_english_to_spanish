@@ -6,7 +6,6 @@ Three types of Self-Attention Used in the Paper:
     2) Masked Self-Attention: used in the decoder: same as self-attention, but doesn't attend to future tokens
     3) Cross Attention: used in decoder: attends to encoder's output
 """
-from typing import Optional
 from torch import Tensor
 import torch.nn as nn
 import torch.nn.functional as F
@@ -56,7 +55,7 @@ class SelfAttention(nn.Module):
         return attention
     
 class MultiHeadAttention(nn.Module):
-    def __init__(self, embed_dim: int = 512, num_heads: int = 8):
+    def __init__(self, embed_dim: int, num_heads: int):
         """In practice, we compute smaller attentions in parallel and combine results for better performance
         
         Args:

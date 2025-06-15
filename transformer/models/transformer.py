@@ -1,27 +1,11 @@
 """
 Transformer Implementation from 'Attention is All You Need' paper: https://arxiv.org/pdf/1706.03762
 """
+import torch
 from torch import nn
-
-class Encoder(nn.Module):
-    def __init__(self, N: int, num_heads: int):
-        """Initialize Encoder Class Variables
-
-        Args:
-            N: number of encoders and decoders
-            num_heads: number of scaled dot-product attention heads in multi-head attention 
-        """
-        super().__init__()
-        self.N = N
-        self.num_heads = num_heads
-    
-    
-
-class Decoder(nn.Module):
-    def __init__(self):
-        """Initialize Decoder Class Variables
-        """
-        pass
+from torch import Tensor
+from modules.attention import MultiHeadAttention
+from encode import Encoder
 
 
 class Transformer(nn.Module):
