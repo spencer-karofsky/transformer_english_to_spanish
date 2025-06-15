@@ -4,10 +4,18 @@ Transformer Implementation from 'Attention is All You Need' paper: https://arxiv
 from torch import nn
 
 class Encoder(nn.Module):
-    def __init__(self):
-        """ Initialize Encoder Class Variables
+    def __init__(self, N: int, num_heads: int):
+        """Initialize Encoder Class Variables
+
+        Args:
+            N: number of encoders and decoders
+            num_heads: number of scaled dot-product attention heads in multi-head attention 
         """
-        pass
+        super().__init__()
+        self.N = N
+        self.num_heads = num_heads
+    
+    
 
 class Decoder(nn.Module):
     def __init__(self):
