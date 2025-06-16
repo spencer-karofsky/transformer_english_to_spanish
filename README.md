@@ -10,7 +10,7 @@ I implemented and trained a transformer for English-to-Spanish Machine Translati
 ### Features
 
 * Uses the [OPUS Books](https://opus.nlpl.eu/opus-100.php) dataset (English <-> Spanish)
-* Implements and trains a transformer architecture inspired by the original paper based on [Attention is All You Need](https://arxiv.org/pdf/1706.03762)
+* Implements and trains a transformer architecture inspired by the original paper
 * Runs inference on nine English example sentences of increasing complexity
 
 ### Model and Training Details
