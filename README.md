@@ -1,4 +1,4 @@
-# Transformer – English to Spanish Translator
+# Building a Transformer for English-to-Spanish Translation
 #### Spencer Karofsky
 
 ### High-Level Description
