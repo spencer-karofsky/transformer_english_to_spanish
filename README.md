@@ -50,7 +50,7 @@ I evaluated this model on nine English sentences, of increasing complexity:
 
 ### Reflection
 
-This model serves as a functional proof of concept for English-to-Spanish machine translation given my hardware constraints. While the translations are often imperfect when translated back to English, the model consistently generates well-formed Spanish sentences without producing gibberish or invalid tokens—even if the output occasionally lacks semantic accuracy. Overall, I am very satisfied with this project's outcome.
+This model serves as a functional proof of concept for English-to-Spanish machine translation given my hardware constraints. While the translations are often imperfect when translated back to English, the model consistently generates well-formed Spanish sentences without producing gibberish or invalid tokens—even if some of the outputs lack semantic accuracy. Overall, I am very satisfied with this project's outcome.
 
 ### Future Work
 
