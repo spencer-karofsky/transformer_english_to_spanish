@@ -56,4 +56,4 @@ This model serves as a functional proof of concept for English-to-Spanish machin
 
 I plan to use PyTorch’s built-in Transformer implementation to train a larger and more sophisticated model, targeting a well-defined, real-world application.
 
-I hope to train future models using a cloud service such as AWS of GCP.
+I hope to train future models using a cloud service such as AWS or GCP.
