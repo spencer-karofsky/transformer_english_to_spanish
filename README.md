@@ -17,7 +17,7 @@ I implemented and trained a transformer for English-to-Spanish Machine Translati
 
 | Parameter                | Value                     |
 | ------------------------ | ------------------------- |
-| Total Parameters         | 135M                      |
+| Total Parameters         | 123M                      |
 | Epochs                   | 30                        |
 | Training Time            | \~8 hours                 |
 | Device                   | MacBook Pro M4 Max        |
